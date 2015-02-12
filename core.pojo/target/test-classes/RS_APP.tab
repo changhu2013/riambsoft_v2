@@ -1,0 +1,10 @@
+--应用程序
+create table RS_APP
+(
+  ID              NVARCHAR2(50) not null,
+  SYSTEM          NVARCHAR2(50) not null,
+  CODE            NVARCHAR2(50) not null,
+  NAME            NVARCHAR2(100) not null,
+  TYPE            NVARCHAR2(50) not null,
+  REMARK          NVARCHAR2(2000)
+);

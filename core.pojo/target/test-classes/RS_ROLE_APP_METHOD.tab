@@ -1,0 +1,6 @@
+create table RS_ROLE_APP_METHOD
+(
+  ROLE_ID      NVARCHAR2(50) not null,
+  APP_ID       NVARCHAR2(50) not null,
+  METHOD_ID    NVARCHAR2(50) not null
+);

@@ -1,0 +1,48 @@
+
+
+/****************************************************************
+*                                                               *
+*                 该项目为RS10新产品底层架构支持层                                          *
+*                                                               *
+****************************************************************/
+
+/================================================================================
+|
+|  core : 支持层核心模块
+|
+|  core.config : 支持配置模块
+|
+|  core.config.webconsole : 支持层配置管理控制台模块
+|
+|  core.web : 支持WEB服务支持模块
+|  
+|  core.webservice : 支持WebService SOAP协议服务的发布
+|
+|  core.log : 支持层日志服务模块
+|
+|  core.util : 支持层工具类。可读取Framework的类加载器。
+|
+|  core.database : 支持层数据源连接池服务模块                                
+|
+|  core.database.dbcp.oracle : 支持层数据源连接池服务DBCP实现、仅支持ORACLE数据库 
+|
+|  core.pojo ： 系统基本内置对象模块、包含User、类等。一些基本内置类
+|
+|  core.auth : 用户验证服务
+|  
+|  core.auth.db : 数据库验证方式
+|
+|  core.access : 系统访问控制管理服务
+|
+|  core.access.validate : 访问控制验证服务。依赖 core.pojo、core.dao
+|
+|  core.access.persistence : 访问控制点持久化服务
+|
+|  core.dao : 基本内置类的持久化服务定义。DataSourceConfig、RSObjectDao、UserDao、RightDao、RoleDao等
+|
+|  core.dao.impl : 基本内置类持久话服务的实现
+|  
+|
+|=================================================================================/
+
+

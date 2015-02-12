@@ -1,0 +1,5 @@
+create table RS_USER_ROLE
+(
+  USER_ID   NVARCHAR2(50) not null,
+  ROLE_ID   NVARCHAR2(50) not null
+);

@@ -1,0 +1,9 @@
+--权限控制点存储
+create table RS_RIGHT
+(
+  CONTROLLER_NAME NVARCHAR2(50) not null,
+  SERVICE_NAME    NVARCHAR2(100) not null,
+  METHOD_NAME     NVARCHAR2(100) not null,
+  CONTROL         NVARCHAR2(10) default 'true',
+  RIGHT_DESC      NVARCHAR2(2000)
+);

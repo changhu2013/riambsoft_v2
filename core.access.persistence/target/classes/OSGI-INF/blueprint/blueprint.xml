@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0">
+
+	<!-- 获取权限持久化服务 -->
+	<reference id="rsMethodDao" interface="com.riambsoft.core.dao.RsMethodDao"
+		timeout="30000" />
+
+	<!-- 发布权限持久化服务 -->
+	<service auto-export="all-classes">
+		<bean class="com.riambsoft.core.access.persistence.RSAccessPersistenceImpl">
+			<property name="rsMethodDao" ref="rsMethodDao" />
+		</bean>
+	</service>
+
+</blueprint>

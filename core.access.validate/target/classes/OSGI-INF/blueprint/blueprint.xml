@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0">
+
+	<reference id="rsMethodDao" interface="com.riambsoft.core.dao.RsMethodDao"
+		timeout="30000" />
+
+	<bean id="rsAccessValidator"
+		class="com.riambsoft.core.access.validate.RSAccessValidatorImpl">
+		<property name="rsMethodDao" ref="rsMethodDao"></property>
+	</bean>
+
+	<bean class="com.riambsoft.core.access.RSAccessValidateService"
+		init-method="init" destroy-method="destroy">
+		<argument ref="rsAccessValidator" />
+	</bean>
+
+</blueprint>

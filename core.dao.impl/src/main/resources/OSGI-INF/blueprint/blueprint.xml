@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0">
+
+
+	<bean id="coreDataSourceConfig" class="com.riambsoft.core.dao.CoreDataSourceConfig"
+		factory-method="getInstance">
+	</bean>
+
+	<bean id="coreDataSource" class="com.riambsoft.core.datasource.RSDataSource">
+		<argument ref="coreDataSourceConfig" />
+	</bean>
+
+	<service interface="com.riambsoft.core.dao.UserDao">
+		<bean class="com.riambsoft.core.dao.impl.UserDaoImpl">
+			<property name="dataSource" ref="coreDataSource" />
+		</bean>
+	</service>
+
+	<service interface="com.riambsoft.core.dao.RoleDao">
+		<bean class="com.riambsoft.core.dao.impl.RoleDaoImpl">
+			<property name="dataSource" ref="coreDataSource" />
+		</bean>
+	</service>
+
+	<!-- 发布后台服务方法管理DAO服务 -->
+	<service interface="com.riambsoft.core.dao.RsMethodDao">
+		<bean class="com.riambsoft.core.dao.impl.RsMethodDaoImpl">
+			<property name="dataSource" ref="coreDataSource" />
+		</bean>
+	</service>
+	
+	<!-- 发布APP管理DAO服务 -->
+	<service interface="com.riambsoft.core.dao.RsAppDao">
+		<bean class="com.riambsoft.core.dao.impl.RsAppDaoImpl">
+			<property name="dataSource" ref="coreDataSource" />
+		</bean>
+	</service>
+
+</blueprint>

@@ -1,0 +1,4 @@
+com\riambsoft\core\service\Activator.class
+com\riambsoft\core\service\StoreService.class
+com\riambsoft\core\service\StoreData$StoreMetaData.class
+com\riambsoft\core\service\StoreData.class
